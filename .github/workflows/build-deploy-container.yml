@@ -7,8 +7,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  WEBAPP_IMAGE_NAME: bigcapital/bigcapital-webapp
-  SERVER_IMAGE_NAME: bigcapital/bigcapital-server
+  WEBAPP_IMAGE_NAME: ruihui-autoloans/bigcapital-webapp
+  SERVER_IMAGE_NAME: ruihui-autoloans/bigcapital-server
 
 jobs:
   build-publish-webapp:
@@ -43,12 +43,6 @@ jobs:
             tags: ghcr.io/bigcapitalhq/webapp:latest
             labels: ${{ steps.meta.outputs.labels }}
 
-      # Send notification to Slack channel.
-      - name: Slack Notification built and published webapp container successfully.
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-
   build-publish-server:
     name: Build and deploy server container
     runs-on: ubuntu-latest
@@ -73,9 +67,3 @@ jobs:
           push: true
           tags: ghcr.io/bigcapitalhq/server:latest
           labels: ${{ steps.meta.outputs.labels }}
-
-      # Send notification to Slack channel.
-      - name: Slack Notification built and published server container successfully.
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
