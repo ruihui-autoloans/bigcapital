@@ -40,7 +40,7 @@ jobs:
             context: .
             file: ./packages/webapp/Dockerfile
             push: true
-            tags: ghcr.io/bigcapitalhq/webapp:latest
+            tags: ghcr.io/ruihui-autoloans/webapp:latest
             labels: ${{ steps.meta.outputs.labels }}
 
   build-publish-server:
@@ -65,5 +65,5 @@ jobs:
           context: ./
           file: ./packages/server/Dockerfile
           push: true
-          tags: ghcr.io/bigcapitalhq/server:latest
+          tags: ghcr.io/ruihui-autoloans/server:latest
           labels: ${{ steps.meta.outputs.labels }}
