@@ -24,11 +24,11 @@ services:
 
   webapp:
     container_name: bigcapital-webapp
-    image: ghcr.io/bigcapitalhq/webapp:latest
+    image: ghcr.io/ruihui-autoloans/webapp:latest
 
   server:
     container_name: bigcapital-server
-    image: ghcr.io/bigcapitalhq/server:latest
+    image: ghcr.io/ruihui-autoloans/server:latest
     links:
       - mysql
       - mongo

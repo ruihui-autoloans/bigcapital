@@ -1,7 +1,7 @@
 
 export default [
   {
-    name:'Bank Account',
+    name:'Bank Account TEST',
     slug: 'bank-account',
     account_type: 'bank',
     code: '10001',
@@ -259,7 +259,7 @@ export default [
     predefined: 0,
   },
   {
-    name:'Depreciation Expense',
+    name:'TEST Depreciation Expense',
     slug: 'depreciation-expense',
     account_type: 'expense',
     parent_account_id: null,
@@ -305,7 +305,7 @@ export default [
     predefined: 1,
   },
   {
-    name:'Other Income',
+    name:'Other Income TEST',
     slug: 'other-income',
     account_type: 'other-income',
     parent_account_id: null,
